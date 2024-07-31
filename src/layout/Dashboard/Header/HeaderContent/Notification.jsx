@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -18,11 +17,9 @@ import Popper from '@mui/material/Popper';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
 // project import
 import MainCard from 'components/MainCard';
-import Transitions from 'components/@extended/Transitions';
-
+import Transitions from 'components/extended/Transitions';
 // assets
 import BellOutlined from '@ant-design/icons/BellOutlined';
 import CheckCircleOutlined from '@ant-design/icons/CheckCircleOutlined';
@@ -47,7 +44,6 @@ const actionSX = {
   transform: 'none'
 };
 
-// ==============================|| HEADER CONTENT - NOTIFICATION ||============================== //
 
 export default function Notification() {
   const theme = useTheme();

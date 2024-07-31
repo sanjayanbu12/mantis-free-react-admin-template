@@ -16,13 +16,14 @@ import Tabs from '@mui/material/Tabs';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { useNavigate } from 'react-router';
 
 // project import
 import ProfileTab from './ProfileTab';
 import SettingTab from './SettingTab';
-import Avatar from 'components/@extended/Avatar';
+import Avatar from 'components/extended/Avatar';
 import MainCard from 'components/MainCard';
-import Transitions from 'components/@extended/Transitions';
+import Transitions from 'components/extended/Transitions';
 
 // assets
 import LogoutOutlined from '@ant-design/icons/LogoutOutlined';
@@ -46,11 +47,10 @@ function a11yProps(index) {
   };
 }
 
-// ==============================|| HEADER CONTENT - PROFILE ||============================== //
 
 export default function Profile() {
   const theme = useTheme();
-
+  const navigate = useNavigate();
   const anchorRef = useRef(null);
   const [open, setOpen] = useState(false);
   const handleToggle = () => {
@@ -70,6 +70,10 @@ export default function Profile() {
     setValue(newValue);
   };
 
+  const handleLogout = () => {
+    navigate('/login');
+  };
+  
   const iconBackColorOpen = 'grey.100';
 
   return (
@@ -91,7 +95,7 @@ export default function Profile() {
         <Stack direction="row" spacing={1.25} alignItems="center" sx={{ p: 0.5 }}>
           <Avatar alt="profile user" src={avatar1} size="sm" />
           <Typography variant="subtitle1" sx={{ textTransform: 'capitalize' }}>
-            John Doe
+            Sanjay Anbazhagan
           </Typography>
         </Stack>
       </ButtonBase>
@@ -124,16 +128,16 @@ export default function Profile() {
                         <Stack direction="row" spacing={1.25} alignItems="center">
                           <Avatar alt="profile user" src={avatar1} sx={{ width: 32, height: 32 }} />
                           <Stack>
-                            <Typography variant="h6">John Doe</Typography>
+                            <Typography variant="h6">Sanjay Anbazhagan</Typography>
                             <Typography variant="body2" color="text.secondary">
-                              UI/UX Designer
+                              Software Engineer
                             </Typography>
                           </Stack>
                         </Stack>
                       </Grid>
                       <Grid item>
                         <Tooltip title="Logout">
-                          <IconButton size="large" sx={{ color: 'text.primary' }}>
+                          <IconButton size="large" sx={{ color: 'text.primary' }} onClick={handleLogout}>
                             <LogoutOutlined />
                           </IconButton>
                         </Tooltip>

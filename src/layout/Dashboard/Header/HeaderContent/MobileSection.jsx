@@ -13,12 +13,11 @@ import Box from '@mui/material/Box';
 // project import
 import Search from './Search';
 import Profile from './Profile';
-import Transitions from 'components/@extended/Transitions';
+import Transitions from 'components/extended/Transitions';
 
 // assets
 import MoreOutlined from '@ant-design/icons/MoreOutlined';
 
-// ==============================|| HEADER CONTENT - MOBILE ||============================== //
 
 export default function MobileSection() {
   const theme = useTheme();

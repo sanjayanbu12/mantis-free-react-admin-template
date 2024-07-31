@@ -1,28 +1,27 @@
-// assets
 import {
   AppstoreAddOutlined,
   AntDesignOutlined,
   BarcodeOutlined,
   BgColorsOutlined,
   FontSizeOutlined,
-  LoadingOutlined
+  LoadingOutlined,
+  ChromeOutlined
 } from '@ant-design/icons';
 
-// icons
 const icons = {
   FontSizeOutlined,
   BgColorsOutlined,
   BarcodeOutlined,
   AntDesignOutlined,
   LoadingOutlined,
-  AppstoreAddOutlined
+  AppstoreAddOutlined,
+  ChromeOutlined
 };
 
-// ==============================|| MENU ITEMS - UTILITIES ||============================== //
 
 const utilities = {
   id: 'utilities',
-  title: 'Utilities',
+  // title: 'Utilities',
   type: 'group',
   children: [
     {
